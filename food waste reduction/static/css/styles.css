@@ -1,0 +1,89 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../img/2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+h1, h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+.inventory {
+    list-style-type: none;
+    padding: 0;
+}
+
+.inventory li {
+    background-color: #e3f2fd;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+form input[type="text"], form input[type="date"], form input[type="number"] {
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

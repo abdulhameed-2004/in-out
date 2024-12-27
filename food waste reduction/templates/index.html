@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Waste Reduction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Food Inventory</h1>
+        <ul class="inventory">
+            {% for item in inventory %}
+                <li>{{ item.name }} (Expires: {{ item.expiry_date }})</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Add Item</h2>
+        <form method="POST" action="/add_item">
+            <input type="text" name="item_name" placeholder="Item Name" required>
+            <input type="date" name="purchase_date" required>
+            <button type="submit">Add</button>
+        </form>
+
+        <h2>Remove Item</h2>
+        <form method="POST" action="/remove_item">
+            <input type="text" name="item_name" placeholder="Item Name" required>
+            <button type="submit">Remove</button>
+        </form>
+
+        <h2>Recipe Suggestions</h2>
+        <a href="/get_recipes">Get Recipes</a>
+    </div>
+</body>
+</html>
